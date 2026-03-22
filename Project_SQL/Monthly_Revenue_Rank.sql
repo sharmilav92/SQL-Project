@@ -19,7 +19,7 @@ ORDER BY Month DESC
 )
 
 SELECT Month,Product_Category, Mon_Revenue,
-RANK() OVER (PARTITION BY Product_Category ORDER BY Mon_Revenue DESC) AS Revenue_Rank
+RANK() OVER (PARTITION BY Month ORDER BY Mon_Revenue DESC) AS Revenue_Rank
 FROM monthly_revenue
 ORDER BY Month;
     
